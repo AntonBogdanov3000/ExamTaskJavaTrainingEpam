@@ -18,6 +18,7 @@ public enum CommandName {
     SHOW_ALL_CARS,
     DELETE_USER,
     UPDATE_USER,
+    UPDATE_BY_USER,
     DELETE_ORDER,
     CHANGE_LANG,
     CREATE_CLEARANCE,

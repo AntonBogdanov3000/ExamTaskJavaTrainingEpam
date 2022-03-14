@@ -46,6 +46,15 @@
         </form>
     </div>
     <div class="form-group">
+        <form action="${pageContext.request.contextPath}/control" method="post">
+            <input type="hidden" name="path" value="UserPersonalUpdate.jsp">
+            <input type="hidden" name="command" value="UPDATE_BY_USER"/>
+            <input type="hidden" name="upd" value="upd"/>
+            <fmt:message key="welcomePage6" var="msg" bundle="${rb}"/>
+            <button type="submit" class="form-control btn btn-warning">${msg}</button>
+        </form>
+    </div>
+    <div class="form-group">
 <form>
     <input type="hidden" name="login" value="${pageContext.request.getParameter("login")}"/>
     <input type="hidden" name="path" value="/main.jsp"/>

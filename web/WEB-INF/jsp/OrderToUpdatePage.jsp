@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <fmt:setLocale value="${pageContext.session.getAttribute('locale')}"/>
@@ -30,7 +30,7 @@
     <input type="hidden" name="command" value="UPDATE_ORDER"/>
     <input type="hidden" name="order" value="${pageContext.request.getParameter("updOrder")}"/>
 
-    <div class="form-group col-sm-10">
+    <div class="form-group">
     <select name="operation">
         <c:forEach items="${operationList}" var="operation">
             <option>${operation}</option>

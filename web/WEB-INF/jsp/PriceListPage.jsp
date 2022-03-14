@@ -30,7 +30,7 @@
 <thead>
 <tr>
     <th><h4>Operation</h4></th>
-    <th><h4>Price,$</h4></th>
+    <th><h4>Price, $</h4></th>
 <tr>
 </thead>
         <tbody>

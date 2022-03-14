@@ -32,6 +32,7 @@
         <input type="text"  class="form-control" name="model" value=""/>
     </label>
 </div>
+    ${uncorrectSymbol}
     <div>
     <label><fmt:message key="addCarPage3" bundle="${rb}"/>:
         <input type="text" class="form-control" name="plate" value=""/>
@@ -42,15 +43,17 @@
         <input type="text" class="form-control" name="year" value=""/>
     </label>
     </div>
-    <small>${unCorrectYear}</small>
+    ${unCorrectYear}
     <div>
     <label><fmt:message key="addCarPage5" bundle="${rb}"/>:
         <input type="text" class="form-control" name="mileage" value=""/>
     </label>
     </div>
-    <small>${nullData}</small>
+    ${nullData}
+    <div>
        <fmt:message key="addCarPage1" var="msg" bundle="${rb}"/>
     <input type="submit" class="btn btn-success" value="${msg}"/>
+    </div>
 </form>
 </div>
 

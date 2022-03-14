@@ -1,6 +1,7 @@
 package by.bogdanov.controller.command.impl.user;
 
 import by.bogdanov.controller.command.Command;
+import by.bogdanov.controller.command.validators.TextValidator;
 import by.bogdanov.entity.User;
 import by.bogdanov.entity.Vehicle;
 import by.bogdanov.service.ServiceException;
@@ -22,8 +23,13 @@ public class AddCarCommandImpl implements Command {
         User user;
         VehicleService vehicleService = ServiceFactory.getInstance().getVehicleService();
         UserService userService = ServiceFactory.getInstance().getUserService();
+        TextValidator validator = new TextValidator();
         String page = request.getParameter("path");
         try{
+            if(!validator.checkText(request.getParameter("model"))){
+                request.setAttribute("uncorrectSymbol","Uncorrect symbol in model");
+                return "AddCarPage.jsp";
+            }
         String model = request.getParameter("model");
         String plate = request.getParameter("plate");
         if(model.isEmpty() || plate.isEmpty()){

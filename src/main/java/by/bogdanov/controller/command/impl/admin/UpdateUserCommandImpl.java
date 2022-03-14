@@ -34,7 +34,7 @@ public class UpdateUserCommandImpl implements Command {
                 request.setAttribute("role", user.getRole());
                 request.setAttribute("tel", user.getTelephone());
                 request.setAttribute("login", user.getLogin());
-                request.setAttribute("password", user.getPassword());
+                //request.setAttribute("password", user.getPassword());
 
             if(request.getParameter("upd").isEmpty()) {
                 user.setName(request.getParameter("name"));
@@ -42,7 +42,7 @@ public class UpdateUserCommandImpl implements Command {
                 user.setRole(Integer.parseInt(request.getParameter("role")));
                 user.setTelephone(request.getParameter("tel"));
                 user.setLogin(request.getParameter("login"));
-                user.setPassword(request.getParameter("password"));
+                //user.setPassword(request.getParameter("password"));
                 userService.updateUser(user);
             }
             } catch (ServiceException e){

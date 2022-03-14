@@ -1,15 +1,13 @@
 package by.bogdanov.controller.command;
 
-import by.bogdanov.controller.command.impl.*;
 import by.bogdanov.controller.command.impl.admin.*;
+import by.bogdanov.controller.command.impl.collective.*;
 import by.bogdanov.controller.command.impl.manager.CreateOrderCommandImpl;
 import by.bogdanov.controller.command.impl.manager.GetClientCarsCommandImpl;
 import by.bogdanov.controller.command.impl.manager.ShowAllOrdersCommandImpl;
 import by.bogdanov.controller.command.impl.manager.UpdateOrderCommandImpl;
-import by.bogdanov.controller.command.impl.user.AddCarCommandImpl;
-import by.bogdanov.controller.command.impl.user.ReadUserCasCommandImpl;
-import by.bogdanov.controller.command.impl.user.ReadUserOrdersCommand;
-import by.bogdanov.controller.command.impl.user.RegistrationCommandImpl;
+import by.bogdanov.controller.command.impl.user.*;
+
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.logging.log4j.Logger;
@@ -43,6 +41,7 @@ public class CommandProvider {
         listCommand.put(CommandName.DELETE_CLEARANCE, new DeleteClearanceCommandImpl());
         listCommand.put(CommandName.DELETE_CAR, new DeleteCarCommandImpl());
         listCommand.put(CommandName.GET_CLIENT_CARS, new GetClientCarsCommandImpl());
+        listCommand.put(CommandName.UPDATE_BY_USER, new UpdateByUserCommandImpl());
     }
     public Command getCommand(String text){
         logger.info("Command " + text);

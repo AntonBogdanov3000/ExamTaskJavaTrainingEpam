@@ -62,7 +62,7 @@
                     <input type="hidden" name="command" value="SHOW_PRICES"/>
                     <fmt:message key="mainPage2" var="msg" bundle="${rb}"/>
                     <button type="submit" class="btn btn-success navbar-btn">
-                        <i class="glyphicon glyphicon-usd"></i>${msg}
+                        <i class="glyphicon glyphicon-usd"></i>  ${msg}
                     </button>
                 </form>
                 </li>

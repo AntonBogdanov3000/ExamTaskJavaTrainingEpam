@@ -49,6 +49,7 @@
     <label class="col-sm-4"><fmt:message key="registrationPage1" bundle="${rb}"/>:</label>
         <div class="col-sm-10">
         <input type="text" class="form-control" name="name" value=""/>
+            ${incorrectSymbolName}
         </div>
     </div>
 
@@ -56,6 +57,7 @@
     <label class="col-sm-10"><fmt:message key="registrationPage2" bundle="${rb}"/>:</label>
         <div class="col-sm-10">
         <input type="text" class="form-control" name="lastname" value=""/>
+            ${incorrectSymbolLastName}
         </div>
     </div>
 
@@ -72,7 +74,7 @@
         <input type="text" class="form-control" name="login" value=""/>
         </div>
     </div>
-            <small>${incorrectLogin}</small>
+            ${incorrectLogin}
     <div class="form-group">
     <label class="col-sm-4"><fmt:message key="registrationPage5" bundle="${rb}"/>:</label>
         <div class="col-sm-10">

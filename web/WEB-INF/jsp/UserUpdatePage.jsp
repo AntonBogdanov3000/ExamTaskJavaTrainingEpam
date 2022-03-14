@@ -49,11 +49,6 @@
     <input type="text" class="form-control" name="login" value="${pageContext.request.getAttribute("login")}">
     </label>
     </div>
-    <div class="form-group">
-    <label><fmt:message key="userUpdatePage7" bundle="${rb}"/>:
-    <input type="text" class="form-control" name="password" value="${pageContext.request.getAttribute("password")}">
-    </label>
-    </div>
     <fmt:message key="userUpdatePage8" var="msg" bundle="${rb}"/>
     <input type="submit" class="btn btn-success" value="${msg}">
 </form>
