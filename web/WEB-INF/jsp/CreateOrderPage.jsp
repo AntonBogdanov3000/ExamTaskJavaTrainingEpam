@@ -80,6 +80,12 @@
     <fmt:message key="createOrderPage4" var="msg" bundle="${rb}"/>
     <input type="submit" class="btn btn-success" value="${msg}"/>
 </form>
+    <form>
+        <input type="hidden" name="path" value="/ManagerPage.jsp">
+        <input type="hidden" name="command" value="">
+        <fmt:message key="createOrderPage8" var="msg" bundle="${rb}"/>
+        <input type="submit" class="btn btn-danger" value="${msg}"/>
+    </form>
 </div>
 </body>
 </html>

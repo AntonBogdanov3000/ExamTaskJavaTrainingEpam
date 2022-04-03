@@ -88,7 +88,6 @@ private final Logger logger = LogManager.getLogger(ConnectionPool.class);
 			this.url = url;
 			this.user = user;
 			this.password = password;
-			System.out.println("the pass" + password);
 			this.maxSize = maxSize;
 			this.checkConnectionTimeout = checkConnectionTimeout;
 			for(int counter = 0; counter < startSize; counter++) {

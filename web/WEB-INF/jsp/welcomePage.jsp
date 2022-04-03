@@ -16,6 +16,7 @@
 </head>
 <body>
 <p></p>
+${session.setAttribute("f5ForCar",0)}
 <div class="container">
     <fmt:message key="welcomePage1" var="title_msg" bundle="${rb}"/>
     <h3>${title_msg}, ${userName}</h3>

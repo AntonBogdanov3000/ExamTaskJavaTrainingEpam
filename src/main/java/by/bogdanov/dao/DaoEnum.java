@@ -5,5 +5,5 @@ public enum DaoEnum {
      VEHICLE_DAO,
      ORDER_DAO,
      OPERATION_DAO,
-     CLEARANCE_DAO;
+     CLEARANCE_DAO
 }

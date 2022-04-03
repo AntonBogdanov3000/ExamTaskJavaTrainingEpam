@@ -23,6 +23,7 @@ public class ConnectionServiceImpl implements ConnectionService {
         try {
             ConnectionPool.getInstance().init(DB_DRIVER_CLASS ,DB_URL, DB_USER,
                     DB_PASSWORD, DB_START_SIZE, DB_POOL_SIZE, DB_CHECK_CONNECTION_TIMEOUT);
+            logger.info("Connection started from Connection service");
         }catch (DaoException e){
             logger.debug(e.getMessage());
             e.printStackTrace();

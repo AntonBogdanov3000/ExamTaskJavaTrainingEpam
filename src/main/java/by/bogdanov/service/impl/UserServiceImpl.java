@@ -2,11 +2,8 @@ package by.bogdanov.service.impl;
 
 import by.bogdanov.dao.*;
 import by.bogdanov.dao.mysql.TransactionFactoryImpl;
-import by.bogdanov.entity.Operation;
 import by.bogdanov.entity.User;
-import by.bogdanov.service.OperationService;
 import by.bogdanov.service.ServiceException;
-import by.bogdanov.service.ServiceFactory;
 import by.bogdanov.service.UserService;
 import java.util.List;
 import org.apache.logging.log4j.Logger;
@@ -98,16 +95,6 @@ public class UserServiceImpl extends ServiceImpl implements UserService {
             throw new ServiceException(e);
         }
         return user;
-    }
-
-    public static void main(String[] args) {
-        UserService userService = ServiceFactory.getInstance().getUserService();
-        OperationService operationService = ServiceFactory.getInstance().getOperationService();
-        try {
-            for (User user : userService.readAllUsers()){
-                System.out.println(user);
-            }
-        }catch (ServiceException e){}
     }
  }
 

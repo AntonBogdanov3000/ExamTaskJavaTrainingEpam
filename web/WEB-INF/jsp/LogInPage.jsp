@@ -31,7 +31,6 @@
 <div class="form">
 <form class="form-horizontal" role="form" action="${pageContext.request.contextPath}/control" method="post">
     <input type="hidden" name="command" value="LOGIN"/>
-
     <div class="form-group">
     <div class="form-group">
     <label class="col-sm-6"><fmt:message key="loginPage1" bundle="${rb}"/></label>
@@ -39,9 +38,7 @@
             <input type="text" class="form-control" name="login" value=""/>
     </div>
     </div>
-
-    <small>${errorLoginMessage}</small>
-
+        ${errorLoginMessage}
     <div class="form-group">
    <label class="col-sm-6"><fmt:message key="loginPage2" bundle="${rb}"/></label>
         <div class="col-sm-10">

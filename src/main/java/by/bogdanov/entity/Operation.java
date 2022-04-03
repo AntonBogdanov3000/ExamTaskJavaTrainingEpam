@@ -54,7 +54,7 @@ public class Operation extends Entity{
         if(operation.operationPrice != this.operationPrice){
             return false;
         }
-        if(operation.operationName != this.operationName){
+        if(!operation.operationName.equals(this.operationName)){
             return false;
         }
         return true;

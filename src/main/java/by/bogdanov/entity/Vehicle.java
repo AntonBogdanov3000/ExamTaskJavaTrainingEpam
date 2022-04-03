@@ -9,7 +9,9 @@ public class Vehicle extends Entity {
     private int year;
     private int mileage;
 
-    public Vehicle(){}
+    public Vehicle(){
+    }
+
     public Vehicle(int id, int ownerId, String model,
                    String plate, int year, int mileage ){
         this.id = id;
@@ -82,16 +84,14 @@ public class Vehicle extends Entity {
             return false;
         }
         Vehicle vehicle = (Vehicle) obj;
-        if(vehicle.id != this.id){
-            return false;
-        }
+
         if(vehicle.ownerId != this.ownerId){
             return false;
         }
-        if(vehicle.model != this.model){
+        if(!vehicle.model.equals(this.model)){
             return false;
         }
-        if(vehicle.plate != this.plate){
+        if(!vehicle.plate.equals(this.plate)){
             return false;
         }
         if(vehicle.year != this.year){

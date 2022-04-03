@@ -52,7 +52,7 @@ public class ControllerServlet extends HttpServlet {
             String result = command.execute(request);
             jspPage = "/WEB-INF/jsp/" + result;
             if (result == null) {
-                response.getWriter().write("Error");
+                response.getWriter().write("Resending is prohibited...");
             } else {
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(jspPage);
                 dispatcher.forward(request, response);

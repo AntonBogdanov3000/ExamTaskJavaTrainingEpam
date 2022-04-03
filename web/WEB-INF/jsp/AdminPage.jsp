@@ -18,7 +18,7 @@
 
 <div class="container">
     <fmt:message key="adminPage1" var="msg" bundle="${rb}"/>
-    <h3>${msg}, ${userName}</h3>
+    <h3>${msg}</h3>
     <br><br>
     <div class="form-group">
 <form action="${pageContext.request.contextPath}/control" method="post">

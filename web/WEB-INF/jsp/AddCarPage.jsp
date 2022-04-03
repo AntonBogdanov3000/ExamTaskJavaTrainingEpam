@@ -38,6 +38,7 @@
         <input type="text" class="form-control" name="plate" value=""/>
     </label>
     </div>
+    ${wrongPlateEnter}
     <div>
     <label><fmt:message key="addCarPage4" bundle="${rb}"/>:
         <input type="text" class="form-control" name="year" value=""/>

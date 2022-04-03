@@ -1,7 +1,6 @@
 package by.bogdanov.entity;
 
 import java.util.Date;
-import java.util.List;
 
 public class Clearance extends Entity{
 
@@ -96,7 +95,7 @@ public class Clearance extends Entity{
         if(clearance.id != this.id){
             return false;
         }
-        if(clearance.name != this.name){
+        if(!clearance.name.equals(this.name)){
             return false;
         }
         if(clearance.startDate != this.startDate){

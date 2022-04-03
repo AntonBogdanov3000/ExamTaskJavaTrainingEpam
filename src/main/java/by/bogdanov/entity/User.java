@@ -97,22 +97,20 @@ public class User extends Entity {
             return false;
         }
         User user = (User) obj;
-        if(user.id != this.id){
+
+        if(!user.name.equals(this.name)){
             return false;
         }
-        if(user.name != this.name){
+        if(!user.lastName.equals(this.lastName)){
             return false;
         }
-        if(user.lastName != this.lastName){
+        if(!user.password.equals(this.password)){
             return false;
         }
-        if(user.password != this.password){
+        if(!user.login.equals(this.login)){
             return false;
         }
-        if(user.login != this.login){
-            return false;
-        }
-        if(user.telephone != this.telephone){
+        if(!user.telephone.equals(this.telephone)){
             return false;
         }
         if(user.role != this.role){
@@ -130,7 +128,7 @@ public class User extends Entity {
     public int hashCode(){
         final int number = 31;
         int result = 1;
-        result = number * result + (int)id;
+        result = number * result + id;
         result = number * result + name.hashCode();
         result = number * result + lastName.hashCode();
         result = number * result + password.hashCode();

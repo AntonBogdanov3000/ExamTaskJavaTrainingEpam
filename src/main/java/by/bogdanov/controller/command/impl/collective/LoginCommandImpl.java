@@ -2,6 +2,7 @@ package by.bogdanov.controller.command.impl.collective;
 
 import by.bogdanov.controller.command.Command;
 import by.bogdanov.controller.command.validators.LoginValidator;
+import by.bogdanov.controller.command.validators.PasswordValidator;
 import by.bogdanov.entity.User;
 import by.bogdanov.service.ServiceException;
 import by.bogdanov.service.ServiceFactory;
@@ -20,13 +21,15 @@ public class LoginCommandImpl implements Command {
         User user;
         UserService userService = ServiceFactory.getInstance().getUserService();
         LoginValidator loginValidator = new LoginValidator();
+        PasswordValidator passwordValidator = new PasswordValidator();
 
         String password = request.getParameter("password");
         String login = request.getParameter("login");
         int idManager;
 
-        if(password.isEmpty() || login.isEmpty() || !loginValidator.checkLogin(login)){
-            request.setAttribute("errorLoginMessage", "Incorrect Login or Password");
+        if(password.isEmpty() || login.isEmpty() || !loginValidator.checkLogin(login)
+        || !passwordValidator.checkPass(password)){
+            request.setAttribute("errorLoginMessage", "Incorrect or empty Login or Password");
             return "LogInPage.jsp";
         }
 
@@ -34,9 +37,11 @@ public class LoginCommandImpl implements Command {
             user = userService.readUserByLogin(login);
             request.getSession().setAttribute("userName", user.getName());
             request.getSession().setAttribute("userId", user.getId());
+            request.getSession().setAttribute("userLogin", user.getLogin());
+
             logger.info("User id: " + user.getId() + " " + user.getLogin() + " is login");
             
-            if(user.getRole()==2){
+            if(user.getRole() == 2){
                 idManager = user.getId();
             } else{
                 idManager = 0;
